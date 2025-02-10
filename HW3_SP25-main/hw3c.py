@@ -1,8 +1,10 @@
 import math
 #chatgpt
-
+"""This program solves a system of linear equations
+using either Cholesky’s or the Doolittle method dependent on its symmetry and
+sign"""
 def is_symmetric(A):
-    #checking symmetry
+    #checking symmetry of Matrix
     n = len(A)
     for i in range(n):
         for j in range(i + 1, n):
@@ -24,7 +26,7 @@ def is_positive_definite(A):
 
 
 def determinant_of_matrix(A):
-    #finding determinant
+    #finding determinant of matrix using Laplace
     if len(A) == 1:
         return A[0][0]
     if len(A) == 2:
@@ -99,7 +101,7 @@ def doolittle_solve(A, b):
 
 def main():
     print("This program solves Ax = b using Cholesky or Doolittle method (math module only).")
-
+#system of equations
     matrices = (([
       [1, -1, 3, 2],
       [-1, 5, -5, -2],
